@@ -1,0 +1,28 @@
+
+:root{
+    --main-bg-color:rgb(220, 99, 99);
+  }
+
+p{
+    color : var(--main-bg-color);
+}
+
+a[rel]{
+    border: 1px solid red; 
+}
+
+a[rel='Un Francés']{
+    border:1px solid blue;
+}
+
+a[lang|='es-ES']{
+    background-color:yellow;
+}
+
+button [type^='sub' ]{
+    color: red;
+}
+
+button{
+    color: green;
+}
