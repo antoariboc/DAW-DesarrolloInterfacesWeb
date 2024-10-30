@@ -26,3 +26,17 @@ button [type^='sub' ]{
 button{
     color: green;
 }
+
+a[href$="co.uk"]{
+    font-family: Verdana, sans-serif;
+}
+a[href^="bing"]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2:nth-child(3){
+    background-color: slateblue;
+}
+
+h2:nth-child(2){
+    background-color: red;
+}
