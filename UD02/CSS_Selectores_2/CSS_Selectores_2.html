@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <h1>:target</h1>
+        <div class="target">
+            <a href="#link1">Link 1</a>   
+            <a href="#link2">Link 2</a>
+            <div id="link1">
+                <h3>Content to Link 1</h3>
+                <p>Hello World!</p>
+            </div>
+              
+            <div id="link2">
+                <h3>Content to Link 2</h3>
+                <h4>Great success!</h4>
+            </div>
+        </div>
+
+
+        <h1>:empty</h1>
+        <div class="empty">aaaaa</div>
+        <div class="empty"></div>
+
+
+        <h1>:root</h1>
+        Puesto a Arial la font 
+
+        <h1>:checked</h1>
+        <input name="gender"  type="checkbox" value="si" checked>
+        <input name="gender2" type="checkbox" value="no">
+
+        <h1>:disabled y :enabled</h1>
+        <input type="text">
+        <input type="text" disabled>
+
+        <h1>:required y optional</h1>
+        <input type="text" required>
+        <input type="text" optional>
+
+        <h1>:valid e :invalid</h1>
+        <form>
+            <label for="email">Email: </label><br>
+            <input id="email" name="email" type="email" value="test@example.com" />
+            <input id="email2" name="email2" type="email" value="testexample.com" />
+        </form>
+
+        <h1>:in-range y :out-of-range</h1>
+        <p>Número entre 1 y 10:</p>
+        <input type="number" min="1" max="10" value="7">
+        <input type="number" min="1" max="10" value="14">
+    </body>
+</html>

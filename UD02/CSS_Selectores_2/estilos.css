@@ -1,0 +1,59 @@
+.target div {
+    display:none;
+}
+
+.target div:target {
+    display: block;
+  border: 2px solid red;
+}
+
+div.empty {
+    background-color: aqua;
+    height: 30px;
+}
+
+div.empty:empty {
+    background-color: bisque;
+}
+
+:root {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+input:checked{
+    outline: 2px solid red;
+}
+
+input:disabled{
+    background-color: grey;
+}
+
+input:enabled{
+    background-color: lightblue;
+}
+
+input:required{
+    border: 2px solid red;
+    background-color: lightcoral;
+}
+
+input:optional{
+    border: 2px solid yellow;
+}
+
+input:valid{
+    background-color: lightgreen;
+}
+
+input:invalid{
+    background-color: lightcoral;
+}
+
+input:in-range{
+    background-color: thistle;
+}
+
+input:out-of-range{
+    background-color: brown;
+
+}
