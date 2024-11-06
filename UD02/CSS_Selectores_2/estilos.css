@@ -24,36 +24,35 @@ input:checked{
     outline: 2px solid red;
 }
 
-input:disabled{
+input[type="text"]:disabled{
     background-color: grey;
 }
 
-input:enabled{
+input[type="text"]:enabled{
     background-color: lightblue;
 }
 
-input:required{
-    border: 2px solid red;
-    background-color: lightcoral;
+input[type="text"]:required{
+    border: 2px solid red;   
 }
 
-input:optional{
+input[type="text"]:optional{
     border: 2px solid yellow;
 }
 
-input:valid{
+input[type="email"]:valid{
     background-color: lightgreen;
 }
 
-input:invalid{
+input[type="email"]:invalid{
     background-color: lightcoral;
 }
 
-input:in-range{
+input[type="number"]:in-range{
     background-color: thistle;
 }
 
-input:out-of-range{
+input[type="number"]:out-of-range{
     background-color: brown;
 
 }
