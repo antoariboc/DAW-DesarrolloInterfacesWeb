@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DIW : UD02 - Displays </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="diwstyle.css">
+</head>
+
+<body>
+    <textarea id="source">
+
+class: center, middle
+
+# UD02 - CSS - POSITION y DISPLAYS
+
+---
+
+# Position
+
+--
+
+## static
+
+Element displays on the page in the order it appeared in the document. Top, right, bottom, left, and z-index properties have no effect when used with static. Not stackable due to z-index restriction.
+
+--
+
+## relative 
+
+Similar to static but able to be offset by top, right, bottom, left, and z-index properties.
+
+--
+
+## absolute 
+
+Element positioned relative to its first non-static ancestor element. Similar to relative in that it may be offset by top, right, bottom, left, and z-index properties.
+
+--
+
+## fixed
+
+Similar to absolute, but positioned relative to the browser window. Scrolling will not move this element.
+
+--
+
+## sticky
+
+Element is positioned relative until a specified offset position is met by scrolling, then the element is positioned ‘fixed’ in that position on the scrolling element.
+
+---
+
+# Displays
+
+--
+
+Sobreescribe la caja de dibujado que se utiliza en el motor de renderizado.
+
+--
+
+```css
+E { display:none}
+```
+--
+
+```css
+E { visibility:hidden}
+```
+
+--
+
+```css
+E { display:inline}
+```
+--
+
+```css
+E { display:block}
+```
+--
+
+```css
+E { display:inline-block}
+```
+
+---
+
+# Float
+
+While float defaults to none, setting this property to left or right ‘floats’ an element to the left or right of a container respectively, wrapping the rest of the content around it.
+
+Consider an inline element such as an <img> nested within a <p>. Setting the float value to ‘left’ will put the image on the left side & the text to the right, wrapping to the full line below where the image ends.
+
+Setting a clear property on another element (such as a <p> near a floated <img>) will disallow floating on one or both sides.
+
+---
+
+# Practicamos
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+        var slideshow = remark.create();
+    </script>
+</body>
+
+</html>

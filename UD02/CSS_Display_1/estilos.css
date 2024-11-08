@@ -1,0 +1,63 @@
+div.position {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    margin: 10px;
+}
+
+div.static {
+    position: static;
+    background-color: burlywood;
+    top: 50px;
+    left: 150px;
+}
+
+div.relative {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    background-color: burlywood;
+}
+
+div.absolute {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    background-color: burlywood;
+} 
+
+div.display {
+    height: 30px;
+    margin: 10px;
+    background-color: antiquewhite;
+}
+
+div.none {
+    display: none;
+}
+
+div.hidden {
+    visibility: hidden;
+}
+
+div.inline {
+    display: inline;
+}
+
+span.display {
+    height: 30px;
+    margin: 10px;
+    background-color: antiquewhite;
+}
+
+span.block {
+    display: block;
+}
+
+div.float {
+    float: left;
+}
+
+div.inline-block {
+    display: inline-block;
+}
