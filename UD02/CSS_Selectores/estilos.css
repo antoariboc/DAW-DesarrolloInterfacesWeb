@@ -1,11 +1,20 @@
 
 :root{
     --main-bg-color:rgb(220, 99, 99);
-  }
+    
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+}
 
 p{
     color : var(--main-bg-color);
 }
+
+
+
 
 a[rel]{
     border: 1px solid red; 
@@ -19,33 +28,75 @@ a[lang|='es-ES']{
     background-color:yellow;
 }
 
-button [type^='sub' ]{
-    color: red;
-}
-
-button{
-    color: green;
-}
-
 a[href$="co.uk"]{
     font-family: Verdana, sans-serif;
 }
+
 a[href^="bing"]{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-h2:nth-child(3){
-    background-color: slateblue;
+
+a[href*="co"]{
+    background-color: aquamarine;
 }
 
-h2:nth-child(2){
-    background-color: red;
+
+
+p::first-letter{
+    color: blue;
 }
 
-div {height: 20px;}
-div:first-child {background-color: purple;}
-div:last-child {background-color: greenyellow;}
-div:nth-last-of-type(2){color:aqua}
-div:empty {background-color: black;}
-:not(a){
+p::first-line{
+    color: rgb(57, 105, 105);
+}
+
+p::before{
+    content: "esto es un ::before ";
+    text-decoration: underline;
+}
+
+p::after{
+    content: "esto es un ::after ";
+    text-decoration: underline;
+}
+
+p::selection{
+    color: chartreuse;
+}
+
+h3:nth-child(2) {
+    color: blueviolet;
+}
+
+h3:nth-last-child(2) {
+    color: violet;
+}
+
+h3:empty{
+    height: 20px;
+    background-color: rgb(151, 241, 241);
+}
+
+h3:first-child {
+    background-color: tomato;
+}
+
+h3:last-child {
+    background-color: rgb(28, 59, 56);
+}
+
+h3:nth-of-type(2){
+    background-color: rgb(206, 174, 236);
+}
+
+h3:nth-last-of-type(2){
+    background-color: rgb(241, 198, 236);
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:not(p){
     font-family: Arial, Helvetica, sans-serif;
 }
