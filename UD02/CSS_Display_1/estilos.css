@@ -12,6 +12,15 @@ div.static {
     left: 150px;
 }
 
+div.sticky {
+    position: sticky;
+    background-color: burlywood;
+    top: 50px;
+    left: 250px;
+}
+
+
+
 div.relative {
     position: relative;
     top: 50px;
