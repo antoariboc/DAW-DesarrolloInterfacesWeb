@@ -1,0 +1,8 @@
+div.image {
+    width: 200px;
+    height: 200px; 
+    background-image: linear-gradient(rgba(252, 58, 171, 0.432), rgba(122, 237, 245, 0.384)),
+    url('imagenes/image1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
