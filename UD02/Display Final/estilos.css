@@ -1,8 +1,29 @@
 div.image {
-    width: 200px;
-    height: 200px; 
-    background-image: linear-gradient(rgba(252, 58, 171, 0.432), rgba(122, 237, 245, 0.384)),
-    url('imagenes/image1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  margin: 20px;
+  width: 200px;
+  height: 200px; 
+  background-image: linear-gradient(rgba(252, 58, 171, 0.432), rgba(122, 237, 245, 0.384)),
+  url('imagenes/image1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img{margin: 20px;}
+
+img.cover{
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+img.recorte{
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+img.blur{
+  width: 200px;
+  height: 200px;
+  filter:blur(10px);
+}
