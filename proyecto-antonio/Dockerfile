@@ -5,7 +5,9 @@ WORKDIR /app
 # Copiar archivos de configuración
 COPY package.json ./
 # Instalar dependencias
-RUN npm install ejs
+RUN npm install ejs 
+RUN npm install pg 
+RUN npm install bcrypt
 # Copiar todo el código al contenedor
 COPY . .
 # Exponer el puerto en el que corre la app

@@ -8,7 +8,16 @@
     </head>
     <body>
         <h1>Register</h1>
-        <form action="/users/register" method="POST"></form>
+
+        <!-- Lista que muestra los errores en la form al registrarse-->
+        <ul>
+            <% if(typeof errors != 'undefined') {%> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+            <% }) %> <% } %>
+        </ul>
+
+
+        <form action="/users/register" method="POST">
             <div>
                 <input type="text" name="name" id="name" placeholder="name" required>
             </div>
@@ -22,7 +31,7 @@
                 <input type="password" name="password2" id="password2" required>
             </div>
             <div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Register">
             </div>
         </form>
         <a href="/users/login">Already have an account? Login here</a>
