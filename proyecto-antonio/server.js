@@ -68,6 +68,21 @@ app.post('/users/register', async (req, res)=>{
                 }
             }
         )
+
+        pool.query(
+            `SELECT * FROM users WHERE name = $1`, [name], (err, results)=>{
+                if (err) {
+                    throw err;
+                }
+
+                console.log(results.rows);
+
+                if(results.rows.length > 0){
+                    errors.push({message: "Username already registered"});
+                    res.render("register", { errors });
+                }
+            }
+        )
     }
 });
 
