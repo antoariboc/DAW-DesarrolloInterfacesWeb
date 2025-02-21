@@ -4,6 +4,11 @@ const { pool } = require("./dbConfig");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const flash = require("express-flash");
+const passport = require("passport");
+
+const initializePassport = require("./passportConfig");
+
+initializePassport(passport);
 
 const port = 3000;
 
@@ -24,6 +29,9 @@ app.use(
     })
 );
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(flash());
 
 // Ruta principal
@@ -39,9 +47,9 @@ app.get('/users/login', (req, res) => {
     res.render("login");
 });
 
-app.get('/users/dashboard', (req, res) => {
-    res.render("dashboard");
-});
+app.get("/users/dashboard", (req, res) => {
+    res.render("dashboard", { user: req.user.name });
+  });
 
 
 app.post('/users/register', async (req, res)=>{
@@ -97,7 +105,7 @@ app.post('/users/register', async (req, res)=>{
                                 pool.query(
                                     `INSERT INTO users (name, email, password)
                                      VALUES ($1, $2, $3)
-                                     RETURNING password`,
+                                     RETURNING id, password`,
                                      [name, email, hashedPassword],
                                      (err, results) => {
                                         if (err) {
@@ -118,6 +126,20 @@ app.post('/users/register', async (req, res)=>{
 
         
     }
+});
+
+app.post("/users/login", passport.authenticate("local", {
+    successRedirect: "/users/dashboard",
+    failureRedirect: "/users/login",
+    failureFlash: true
+    })
+);
+
+app.get("/users/logout", (req, res) => {
+    req.logout(req.user, err => {
+      if(err) return next(err);
+      res.redirect("/users/login");
+    });
 });
 
 
