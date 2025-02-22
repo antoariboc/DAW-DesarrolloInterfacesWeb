@@ -8,10 +8,11 @@
         <title>Login</title>
     </head>
     <body>
+        <div class="container">
         <h1>Login</h1>
         <ul>
             <% if(messages.success_msg) { %>
-            <li><%= messages.success_msg %></li>
+            <li style="color: green;"><%= messages.success_msg %></li>
             <% } %>  
         </ul>
 
@@ -35,5 +36,6 @@
         </form>
 
         <a href="/users/register">Register</a>
+        </div>
     </body>
 </html>

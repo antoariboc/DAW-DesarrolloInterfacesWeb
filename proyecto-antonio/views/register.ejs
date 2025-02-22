@@ -8,18 +8,24 @@
         <title>Document</title>
     </head>
     <body id="test">
+        <div class="header">
+            | <a href="/users/register">Register</a> | 
+            <a href="/users/login">Login</a> | 
+            <a href="/users/dashboard">Dashboard</a> |
+        </div>
+        <div class="container">
         <h1>Register</h1>
 
         <!-- Lista que muestra los errores en la form al registrarse-->
         <ul>
             <% if(typeof errors != 'undefined') {%> <% errors.forEach(error=>{ %>
-                    <li><%= error.message %></li>
+                    <li style="color: red;"><%= error.message %></li>
             <% }) %> <% } %>
         </ul>
 
 
         <form action="/users/register" method="POST">
-            <div>
+            <div class="name">
                 <input type="text" name="name" id="name" placeholder="name" required>
             </div>
             <div>
@@ -28,7 +34,7 @@
             <div>
                 <input type="password" name="password" id="password" required>
             </div>
-            <div></div>
+            <div>
                 <input type="password" name="password2" id="password2" required>
             </div>
             <div>
@@ -36,5 +42,6 @@
             </div>
         </form>
         <a href="/users/login">Already have an account? Login here</a>
+        </div>
     </body>
 </html>
