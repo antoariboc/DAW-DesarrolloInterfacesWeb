@@ -6,5 +6,9 @@ Instrucciones para correr el proyecto:
 		-Realize el comando "sudo docker compose up --build".
 		-Espere un poquito.
 		-En su navegador, vaya a la ruta http://localhost:8080/
+
+
+
+Antonio Arias Bocero
 		 
 		
