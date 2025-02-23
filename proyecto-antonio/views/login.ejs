@@ -4,10 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.0.8/skeleton.min.css">
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/styles.css">
         <title>Login</title>
     </head>
     <body>
+        <div class="header">
+            | <a href="/users/register">Register</a> | 
+            <a href="/users/login">Login</a> | 
+            <a href="/users/dashboard">Dashboard</a> |
+        </div>
         <div class="container">
         <h1>Login</h1>
         <ul>
@@ -18,15 +23,20 @@
 
         <ul>
             <% if(messages.error) { %>
-            <li><%= messages.error %></li>
+            <li style="color: red;"><%= messages.error %></li>
             <% } %>  
         </ul>  
 
         <form action="/users/login" method="POST">
-            <div>
-                <input type="email" name="email" id="email" placeholder="email@email.com" required>
-                
+            <div class="label">
+                <label for="email">Email:</label>
             </div>
+            <div>
+                <input type="email" name="email" id="email" placeholder="email@email.com" required>                
+            </div>
+            <div class="label">
+                <label for="password">Password:</label>
+            </div> 
             <div>
                 <input type="password" name="password" id="password" required>
             </div>

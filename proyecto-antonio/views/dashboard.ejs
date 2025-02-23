@@ -4,14 +4,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.0.8/skeleton.min.css">
-        <link rel="stylesheet" href="/styles.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="/css/dashboard-styles.css">
+        <title>Dashboard</title>
     </head>
     <body>
-        <h1>Dashboard</h1>
-
-        <a href="/users/logout">Logout</a>
-
-        <h4>Hello <%= user %></h4>
+        <div class="sidebar">
+            <div class="logo">Dashboard</div>
+            <div class="nav-item active">Overview</div>
+            <div class="nav-item">Analytics</div>
+            <div class="nav-item">Reports</div>
+            <div class="nav-item">Settings</div>
+        </div>
+    
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard Overview</h1>
+                <div>Welcome back, <%= user %>
+                    <br>
+                    <a href="/users/logout">Logout</a>
+                </div>
+            </div>
+    
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-title">Total Revenue</div>
+                    <div class="card-value">$24,500</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Active Users</div>
+                    <div class="card-value">1,234</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Conversion Rate</div>
+                    <div class="card-value">12.3%</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Avg. Session</div>
+                    <div class="card-value">4m 32s</div>
+                </div>
+            </div>
+    
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Performance Overview</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="chart-container">
+                    <h3>Quick Stats</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,7 +1,8 @@
 const LocalStrategy = require("passport-local").Strategy;
 const { pool } = require("./dbConfig");
+//bcrypt para encryptar la password
 const bcrypt = require("bcrypt");
-
+//pasport es un pkg para node.js que ayuda con la autenticación
 function initialize(passport) {
   console.log("Initialized");
 
