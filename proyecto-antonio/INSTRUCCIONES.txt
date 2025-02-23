@@ -1,0 +1,10 @@
+Instrucciones para correr el proyecto:
+	En Ubuntu:
+		-Instale docker y docker-compose.
+		-Sitúese en la ruta donde ha descomprimido el .zip del proyecto.
+		-Sitúese en la carpeta del proyecto.
+		-Realize el comando "sudo docker compose up --build".
+		-Espere un poquito.
+		-En su navegador, vaya a la ruta http://localhost:8080/
+		 
+		
