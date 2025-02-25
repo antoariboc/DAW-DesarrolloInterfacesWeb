@@ -88,3 +88,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+div.line {
+    width: 3px;
+    height: 35px;
+    background-color: #3498db;
+}
